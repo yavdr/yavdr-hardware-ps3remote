@@ -1,0 +1,12 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: yavdr-hardware-ps3remote
+Upstream-Contact: Alexander Grothe <seahawk1986@gmx.de>
+Source: https://github.com/yavdr/yavdr-hardware-ps3remote
+
+Files: *
+Copyright: 2018 Alexander Grothe <seahawk1986@gmx.de>
+License: GPL-2+
+
+Files: debian/*
+Copyright: 2018 Alexander Grothe <seahawk1986@gmx.de>
+License: GPL-2+

@@ -1,0 +1,34 @@
+irmplircd for usb irmp devices
+
+configuration options
+-------------------------------
+
+The following options can be configured in /etc/default/irmplircd:
+
+ENABLED=<0|1>
+	Enable (1) or disable (0) irmplircd daemon
+
+
+KEYMAP="<KEYMAP_PATH>"
+	Set path for translation table to map keys - raw key codes can be read using irw (from lirc package): irw <SOCKET>
+	Default: ""
+	
+	Example:
+	0250af00ef00 KEY_OK
+        0250af006300 KEY_LEFT
+        0250af006400 KEY_RIGHT
+        0250af00f200 KEY_UP
+        0250af00f300 KEY_DOWN
+
+SOCKET="<SOCKET>"
+	Set irmplircd socket path
+        Default: "/var/run/lirc/irmplircd"
+
+IRMPEXEC_ENABLED=<0|1>
+	enable irmpexec (similar to lirc's irexec - but for irmplircd device SOCKET) - do not use with yaVDR (unless you do know exactly what you are doing)
+        Default: 0
+
+IRMPEXEC_MAP="<IRMPEXEC_MAP_PATH"
+	path to action mapping file for irmpexec
+	Syntax: 
+	KEY_KOFFEE /path/to/my/command -x -y --z=abc

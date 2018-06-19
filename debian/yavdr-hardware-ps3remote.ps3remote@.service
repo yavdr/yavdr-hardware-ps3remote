@@ -1,0 +1,4 @@
+[Unit]
+Description=ps3remote - a daemon for the PS3 Bluetooth remote
+[Service]
+ExecStart=/usr/bin/ps3remote -s /dev/input/%I -u ps3remote -g ps3remote

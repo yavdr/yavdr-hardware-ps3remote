@@ -1,0 +1,2 @@
+#!/usr/bin/dh-exec
+ps3remote.py => /usr/bin/ps3remote
