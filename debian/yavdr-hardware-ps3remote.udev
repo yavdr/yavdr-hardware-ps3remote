@@ -1,1 +1,1 @@
-ACTION=="add",SUBSYSTEM=="input", ENV{ID_VENDOR_ID}=="0bf8", ENV{ID_MODEL_ID}=="1003",TAG+="systemd",ENV{SYSTEMD_WANTS}="ps3remote@%k.service",SYMLINK+="input/ps3"
+ACTION=="add", SUBSYSTEM=="input", ATTRS{name}=="BD Remote Control", ENV{SYSTEMD_WANTS}="ps3remote@%k.service", TAG+="systemd", SYMLINK+="input/ps3"
