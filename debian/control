@@ -7,5 +7,5 @@ Standards-Version: 3.9.4
 
 Package: yavdr-hardware-ps3remote
 Architecture: all
-Depends: ${misc:Depends}, lircd2uinput, python3-evdev
+Depends: ${misc:Depends}, lircd2uinput, python3-evdev, bluez
 Description: yaVDR integration for PS3 Bluetooth remote

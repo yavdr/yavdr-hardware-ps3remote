@@ -5,7 +5,6 @@ ps3remote processes the input events of the kernel input device created for the 
 
 ### pairing the PS3 remote
 ```
-sudo apt install bluez
 sudo bluetoothctl
 # in the bluetoothctl shell:
 power on

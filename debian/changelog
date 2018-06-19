@@ -1,3 +1,9 @@
+yavdr-hardware-ps3remote (0.0.4-0yavdr0~bionic) bionic; urgency=medium
+
+  * add bluez as dependency
+
+ -- Alexander Grothe <seahawk1986@gmx.de>  Tue, 19 Jun 2018 10:32:16 +0000
+
 yavdr-hardware-ps3remote (0.0.3-0yavdr0~bionic) bionic; urgency=medium
 
   * fix udev rule
