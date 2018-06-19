@@ -1,3 +1,15 @@
+yavdr-hardware-ps3remote (0.0.3-0yavdr0~bionic) bionic; urgency=medium
+
+  * fix udev rule
+
+ -- Alexander Grothe <seahawk1986@gmx.de>  Tue, 19 Jun 2018 07:53:41 +0000
+
+yavdr-hardware-ps3remote (0.0.2-0yavdr0~bionic) bionic; urgency=medium
+
+  * fix dependencies for postinst script
+
+ -- Alexander Grothe <seahawk1986@gmx.de>  Tue, 19 Jun 2018 06:59:24 +0000
+
 yavdr-hardware-ps3remote (0.0.1-0yavdr0~bionic) bionic; urgency=medium
 
   * initial build 
