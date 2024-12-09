@@ -65,7 +65,7 @@ class EventTranslator():
             async for raw_event in self.inputdevice.async_read_loop():
                 if raw_event.type == ecodes.EV_KEY:
                     event = categorize(raw_event)
-                    with await self.lock:
+                    async with self.lock:
                         if event.keystate == event.key_down:
                             self.active_key = event.scancode
                         elif event.keystate == event.key_up:
@@ -85,14 +85,14 @@ class EventTranslator():
         """send periodic key repeat events"""
         try:
             while True:
-                with await self.lock:
+                async with self.lock:
                     if self.active_key is not None:
                         delta = self.loop.time() - self.ts
                         if delta > self.repeat: # skip repeat if last keypress was too recent 
                             self.outputdevice.write(ecodes.EV_KEY, self.active_key, 2)
                             self.outputdevice.syn()
                             self.ts = self.loop.time()
-                await asyncio.sleep(self.repeat, loop=self.loop)
+                await asyncio.sleep(self.repeat)
         except (KeyboardInterrupt, asyncio.CancelledError):
             if self.active_key:
                 self.outputdevice.write(ecodes.EV_KEY, self.active_key, 0)
